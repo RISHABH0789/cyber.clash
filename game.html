@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Cyber Clash</title>
+  <link rel="stylesheet" href="styles/game.css">
+</head>
+<body>
+  <h1 id="gameName">CYBER CLASH</h1>
+  <div id="player">
+    <p class="character">🥷🏻</p>
+    <meter class="health" min="" max="" optimum=""></meter>
+  </div>
+  <br>
+  <div id="enemy">
+    <p class="character" id="opponent">🧟</p>
+    <meter class="health" min="" max="" optimum=""></meter>
+  </div>
+  <div id="msgBox">
+    <p id="msg"></p>
+  </div>
+  <div id="btns">
+    <button onclick="attack(enemy_hp)" id="attackBtn">ATTACK</button>
+    <button onclick="heal(player_hp)" id="healBtn">HEAL</button>
+  </div>
+  <script src="scripts/game.js"></script>
+</body>
+</html>
