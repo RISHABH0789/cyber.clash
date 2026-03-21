@@ -1,7 +1,13 @@
 const healths = document.querySelectorAll(".health");
+
 const msg = document.getElementById("msg");
-const messages = ["It's a tie!<br>Refresh page to play again","You Win!<br>Refresh page to play again","You Lose!<br>Refresh page to play again"]
+
 const btns = document.getElementById("btns");
+const attackBtn = document.getElementById("btns").children[0];
+const healBtn = document.getElementById("btns").children[1];
+const resetBtn = document.getElementById("btns").children[2];
+
+const messages = ["It's a tie!<br>Refresh page to play again","You Win!<br>Refresh page to play again","You Lose!<br>Refresh page to play again"]
 
 /*------ PLAYER ------*/
 
@@ -83,16 +89,22 @@ function enemy_turn(){
 function decide_winner(){
 
     if(enemy_hp.value <= 0 && player_hp.value <= 0){
+        attackBtn.style.display = "none";
+        healBtn.style.display = "none";
+        resetBtn.style.display = "block";
         msg.innerHTML = messages[0];
-        btns.style.visibility = "hidden";
     }
     else if(enemy_hp.value <= 0){
+        attackBtn.style.display = "none";
+        healBtn.style.display = "none";
+        resetBtn.style.display = "block";
         msg.innerHTML = messages[1];
-        btns.style.visibility = "hidden";
     }
     else{
+        attackBtn.style.display = "none";
+        healBtn.style.display = "none";
+        resetBtn.style.display = "block";
         msg.innerHTML = messages[2];
-        btns.style.visibility = "hidden";
     }
 }
 /*------ GAME LOOP ------*/
@@ -108,4 +120,22 @@ function game_loop(){
     }
 
     enemy_turn();
+}
+
+/*------ RESET ------*/
+
+function reset(){
+    //showing and removing btns 
+    attackBtn.style.display = "block";
+    healBtn.style.display = "block";
+    resetBtn.style.display = "none";
+    
+    //giving health again 
+    player_hp.value = 100;
+    enemy_hp.value = 100;
+    
+    //clearing text box
+    msg.innerHTML = "";
+    
+    loop_id = setInterval(game_loop, 1000);//looping again
 }
