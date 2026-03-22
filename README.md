@@ -1,4 +1,4 @@
-
+![Cyber Clash Banner](img/banner.png)
 ## ⚔️ CYBER CLASH
 Cyber-Clash is a simple rush-fight browser game where players battle enemies using attack and heal mechanics. The game includes health management, critical hit probability, and character selection features.
 
@@ -47,11 +47,14 @@ Cyber-Clash is a simple rush-fight browser game where players battle enemies usi
 
 ## 🎮 How to play
 
-- Choose your character before starting the fight  
-- Each character has their own **health bar**  
+- Choose your character before starting the fight
+![Gameplay](img/img_1.jpg)
+- Each character has their own **health bar**
+![Gameplay](img/img_2.jpg)
 - 🩹 Heal button adds **random health between 10 – 25**  
 - 💥 There is a **20% chance of a critical hit**, dealing **15 damage** 
-- Defeat the enemy before your health reaches zero  
+- Defeat the enemy before your health reaches zero
+![Gameplay](img/img_3.jpg)
 
 ---
    
@@ -61,7 +64,7 @@ Follow these steps to run **Cyber Clash** on your local system.
 
 ### 📥 Step 1 — Clone the Repository
 
-Open your terminal or command prompt and run:
+Open your terminal or command propt and run:
 
 ```bash
 git clone https://github.com/your-username/cyber.clash.git
