@@ -34,7 +34,7 @@ body{
   height: 80%;
   width: 90%;
 }
-#btn{
+.btn{
   margin: 10px;
   height: 40%;
   width: 50%;
@@ -43,6 +43,6 @@ body{
   border: none;
   cursor: pointer;
 }
-#btn:hover{
+.btn:hover{
   text-shadow: 0 0 10px rgb(0,100,255);
 }
